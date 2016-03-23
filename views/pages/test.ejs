@@ -8,33 +8,55 @@
 
 <% include ../partials/nav.ejs %>
 
-
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Modal title</h4>
+                <h4 class="modal-title">Find Friends</h4>
             </div>
             <div class="modal-body">
-                <input type="text" class="form-control" placeholder="I am looking for potatoes" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="I am looking for..." aria-describedby="basic-addon1">
                 <div class="margin-top-10">
-                    <img src="http://www.puzzledragonx.com/en/img/book/1747.png" class="grid"/>
-                    <h4 class="grid" id="monster-name" >Bernie Sanders</h4>
+                    <img src="../../assets/images/mystery_creature.png" class="grid"/>
+                    <h4 class="grid" id="monster-name">No monster chosen</h4>
                 </div>
 
                 <div class="input-group margin-top-10">
-                    <span class="input-group-addon" id="basic-addon1">Lvl:</span>
-                    <input class="form-control" placeholder="Username" aria-describedby="basic-addon1" type="text">
+                    <span class="input-group-addon monster-prefix">Level:</span>
+                    <input class="form-control" placeholder="Minimum Level" aria-describedby="basic-addon1" type="text">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button">Max</button>
                     </span>
                 </div>
 
+                <div class="input-group margin-top-10">
+                    <span class="input-group-addon monster-prefix">Awakenings:</span>
+                    <input class="form-control" placeholder="Minimum Awakenings" aria-describedby="basic-addon1" type="text">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Max</button>
+                    </span>
+                </div>
+
+                <div class="input-group margin-top-10">
+                    <span class="input-group-addon monster-prefix">+ eggs:</span>
+                    <input class="form-control" placeholder="Minimum + Eggs" aria-describedby="basic-addon1" type="text">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Max</button>
+                    </span>
+                </div>
+
+                <div class="input-group margin-top-10">
+                    <span class="input-group-addon monster-prefix">Skill Level:</span>
+                    <input class="form-control" placeholder="Minimum Skill Level" aria-describedby="basic-addon1" type="text">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Max</button>
+                    </span>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary">Search</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
