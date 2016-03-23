@@ -4,6 +4,10 @@
 #monster-name {
     margin-left: 10px;
 }
+#monster-picture {
+    width: 110px;
+    height: 110px;
+}
 .margin-top-10 {
     margin-top: 10px;
 }
@@ -13,9 +17,9 @@
 .stat-input-row span {
     font-size: 18px;
 }
-.stat-input-row .col-xs-8 {
-    padding: 0;
-}
 .monster-prefix {
     width: 110px;
+}
+.select2-container {
+    width: 100% !important;
 }
