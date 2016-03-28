@@ -17,8 +17,8 @@
             </div>
             <div class="modal-body">
                 <select id="monster-suggestion-dropdown">
+                    <option></option>
                 </select>
-                <!--<input type="text" class="form-control" placeholder="I am looking for..." aria-describedby="basic-addon1">-->
                 <div class="margin-top-10">
                     <img src="../../assets/images/mystery_creature.png" id="monster-picture" class="grid"/>
                     <h3 class="grid" id="monster-name">No monster chosen</h3>
@@ -69,11 +69,28 @@
 
 <script type="text/javascript" src="../../js/select2.min.js"></script>
 <script type="text/javascript">
+    function formatState (state) {
+        if (!state.id) { return state.text; }
+        var imgUrl = "http://puzzledragonx.com/en/img/book/" + state.monster_id + ".png";
+        var $state = $(
+                '<span><img src=' + imgUrl + ' class="monster-suggestion-picture"/> ' + state.text + '</span>'
+        );
+        return $state;
+    };
+
     $(document).ready(function() {
         $("#monster-suggestion-dropdown").select2({
-            placeholder: "I am looking for",
-            data: formattedMonsters
+            placeholder: "I am looking for...",
+            data: formattedMonsters,
+            templateResult: formatState
         });
+    });
+
+    $("#monster-suggestion-dropdown").on("select2:select", function (e) {
+        var monsterName = e.params.data.text;
+        var monsterId = e.params.data.monster_id;
+        $("#monster-name").text(monsterName);
+        $("#monster-picture").attr("src", "http://puzzledragonx.com/en/img/book/" + monsterId + ".png");
     });
 </script>
 </body>
