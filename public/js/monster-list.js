@@ -1,5 +1,40 @@
 var monsters = [
     {
+        "awakenings":9,
+        "level":99,
+        "monsterId":2261,
+        "name":"God of the Night, Tsukuyomi Dragon",
+        "skill_level":6
+    },
+    {
+        "awakenings":8,
+        "level":99,
+        "monsterId":2259,
+        "name":"Sun God, Ra Dragon",
+        "skill_level":6
+    },
+    {
+        "awakenings":9,
+        "level":99,
+        "monsterId":2389,
+        "name":"Awoken Sakuya",
+        "skill_level":5
+    },
+    {
+        "awakenings":8,
+        "level":99,
+        "monsterId":2011,
+        "name":"Awoken Bastet",
+        "skill_level":5
+    },
+    {
+        "awakenings":8,
+        "level":99,
+        "monsterId":2390,
+        "name":"Thought Spinner Norn, Verdandi",
+        "skill_level":6
+    },
+    {
         "awakenings":3,
         "level":9,
         "monsterId":824,
@@ -506,13 +541,6 @@ var monsters = [
     {
         "awakenings":8,
         "level":99,
-        "monsterId":2011,
-        "name":"Awoken Bastet",
-        "skill_level":5
-    },
-    {
-        "awakenings":8,
-        "level":99,
         "monsterId":1954,
         "name":"Awoken Shiva",
         "skill_level":5
@@ -947,13 +975,6 @@ var monsters = [
     {
         "awakenings":8,
         "level":99,
-        "monsterId":2259,
-        "name":"Sun God, Ra Dragon",
-        "skill_level":6
-    },
-    {
-        "awakenings":8,
-        "level":99,
         "monsterId":2385,
         "name":"Divine Galaxy Goddess, Nut",
         "skill_level":6
@@ -977,20 +998,6 @@ var monsters = [
         "level":99,
         "monsterId":2044,
         "name":"Determined Summoner, Yuna",
-        "skill_level":6
-    },
-    {
-        "awakenings":9,
-        "level":99,
-        "monsterId":2389,
-        "name":"Awoken Sakuya",
-        "skill_level":5
-    },
-    {
-        "awakenings":8,
-        "level":99,
-        "monsterId":2390,
-        "name":"Thought Spinner Norn, Verdandi",
         "skill_level":6
     },
     {
@@ -1026,13 +1033,6 @@ var monsters = [
         "level":99,
         "monsterId":2384,
         "name":"Ruling Firestorm God, Set",
-        "skill_level":6
-    },
-    {
-        "awakenings":9,
-        "level":99,
-        "monsterId":2261,
-        "name":"God of the Night, Tsukuyomi Dragon",
         "skill_level":6
     },
     {

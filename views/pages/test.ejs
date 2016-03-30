@@ -68,30 +68,6 @@
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 <script type="text/javascript" src="../../js/select2.min.js"></script>
-<script type="text/javascript">
-    function formatState (state) {
-        if (!state.id) { return state.text; }
-        var imgUrl = "http://puzzledragonx.com/en/img/book/" + state.monster_id + ".png";
-        var $state = $(
-                '<span><img src=' + imgUrl + ' class="monster-suggestion-picture"/> ' + state.text + '</span>'
-        );
-        return $state;
-    };
-
-    $(document).ready(function() {
-        $("#monster-suggestion-dropdown").select2({
-            placeholder: "I am looking for...",
-            data: formattedMonsters,
-            templateResult: formatState
-        });
-    });
-
-    $("#monster-suggestion-dropdown").on("select2:select", function (e) {
-        var monsterName = e.params.data.text;
-        var monsterId = e.params.data.monster_id;
-        $("#monster-name").text(monsterName);
-        $("#monster-picture").attr("src", "http://puzzledragonx.com/en/img/book/" + monsterId + ".png");
-    });
-</script>
+<script type="text/javascript" src="../../js/dropdown.js"></script>
 </body>
 </html>
