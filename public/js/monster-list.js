@@ -1193,5 +1193,6 @@ var monsters = [
 
 var formattedMonsters = [];
 for (var i = 0; i < monsters.length; i++) {
-    formattedMonsters.push({"id": i, "text": monsters[i].name, "monster_id": monsters[i].monsterId});
+    formattedMonsters.push({"id": i,"text": monsters[i].name, "monster_id": monsters[i].monsterId,
+        "awakenings": monsters[i].awakenings, "level": monsters[i].level, "skill_level": monsters[i].skill_level});
 }

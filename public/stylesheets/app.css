@@ -1,5 +1,6 @@
 .grid {
     display: inline-block;
+    margin-bottom: 10px;
 }
 #monster-name {
     margin-left: 10px;

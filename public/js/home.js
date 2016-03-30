@@ -1,3 +1,5 @@
+var currentMonster;
+
 function formatMonster (monster) {
     if (!monster.id) { return monster.text; }
     var imgUrl = "http://puzzledragonx.com/en/img/book/" + monster.monster_id + ".png";
@@ -29,8 +31,15 @@ $.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) {
 });
 
 $("#monster-suggestion-dropdown").on("select2:select", function (e) {
-    var monsterName = e.params.data.text;
-    var monsterId = e.params.data.monster_id;
+    currentMonster = e.params.data;
+    var monsterName = currentMonster.text;
+    var monsterId = currentMonster.monster_id;
     $("#monster-name").text(monsterName);
     $("#monster-picture").attr("src", "http://puzzledragonx.com/en/img/book/" + monsterId + ".png");
+});
+
+$("#max-monster-level").on("click", function () {
+    if (currentMonster != undefined) {
+        $("#monster-level").val(currentMonster.level);
+    }
 });
