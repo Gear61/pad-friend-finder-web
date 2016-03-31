@@ -43,3 +43,21 @@ $("#max-monster-level").on("click", function () {
         $("#monster-level").val(currentMonster.level);
     }
 });
+
+$("#max-monster-awakenings").on("click", function () {
+    if (currentMonster != undefined) {
+        $("#monster-awakenings").val(currentMonster.awakenings);
+    }
+});
+
+$("#max-monster-eggs").on("click", function () {
+    if (currentMonster != undefined) {
+        $("#monster-eggs").val("297");
+    }
+});
+
+$("#max-monster-skill-level").on("click", function () {
+    if (currentMonster != undefined) {
+        $("#monster-skill-level").val(currentMonster.skill_level);
+    }
+});

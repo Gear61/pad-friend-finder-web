@@ -21,12 +21,13 @@
                 </select>
                 <div class="margin-top-10">
                     <img src="../../assets/images/mystery_creature.png" id="monster-picture" class="grid"/>
-                    <h3 class="grid" id="monster-name">No monster chosen</h3>
+                    <h3 id="monster-name">No monster chosen</h3>
                 </div>
 
                 <div class="input-group margin-top-10">
                     <span class="input-group-addon monster-prefix">Level:</span>
-                    <input id="monster-level" class="form-control" placeholder="Minimum Level" aria-describedby="basic-addon1" type="text">
+                    <input id="monster-level" class="form-control" aria-describedby="basic-addon1"
+                           placeholder="Minimum Level" type="text" maxlength="2">
                     <span class="input-group-btn">
                         <button id="max-monster-level" class="btn btn-default" type="button">Max</button>
                     </span>
@@ -34,7 +35,8 @@
 
                 <div class="input-group margin-top-10">
                     <span class="input-group-addon monster-prefix">Awakenings:</span>
-                    <input class="form-control" placeholder="Minimum Awakenings" aria-describedby="basic-addon1" type="text">
+                    <input id="monster-awakenings" class="form-control" aria-describedby="basic-addon1"
+                           placeholder="Minimum Awakenings" type="text" maxlength="2">
                     <span class="input-group-btn">
                         <button id="max-monster-awakenings" class="btn btn-default" type="button">Max</button>
                     </span>
@@ -42,7 +44,8 @@
 
                 <div class="input-group margin-top-10">
                     <span class="input-group-addon monster-prefix">+ eggs:</span>
-                    <input class="form-control" placeholder="Minimum + Eggs" aria-describedby="basic-addon1" type="text">
+                    <input id="monster-eggs" class="form-control" aria-describedby="basic-addon1"
+                           placeholder="Minimum + Eggs" type="text" maxlength="3">
                     <span class="input-group-btn">
                         <button id="max-monster-eggs" class="btn btn-default" type="button">Max</button>
                     </span>
@@ -50,12 +53,20 @@
 
                 <div class="input-group margin-top-10">
                     <span class="input-group-addon monster-prefix">Skill Level:</span>
-                    <input class="form-control" placeholder="Minimum Skill Level" aria-describedby="basic-addon1" type="text">
+                    <input id="monster-skill-level" class="form-control" aria-describedby="basic-addon1"
+                           placeholder="Minimum Skill Level" type="text" maxlength="2">
                     <span class="input-group-btn">
                         <button id="max-monster-skill-level" class="btn btn-default" type="button">Max</button>
                     </span>
                 </div>
+
+                <div class="margin-top-10">
+                    <button id="hypermax" type="button" class="btn btn-primary stat-button">Hypermax</button>
+                    <button id="minimum" type="button" class="btn btn-primary stat-button">Minimum</button>
+                </div>
+
             </div>
+
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Search</button>
@@ -66,7 +77,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
 <script type="text/javascript" src="../../js/select2.min.js"></script>
 <script type="text/javascript" src="../../js/home.js"></script>
 </body>
