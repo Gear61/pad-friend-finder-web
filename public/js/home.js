@@ -1,3 +1,8 @@
+const GET = "GET";
+const POST = "POST";
+const BASE_URL = "https://mysterious-citadel-1245.herokuapp.com";
+const FETCH = "/fetch";
+
 var currentMonster;
 
 function formatMonster (monster) {
@@ -77,3 +82,26 @@ $("#minimum").on("click", function () {
     $("#monster-eggs").val("0");
     $("#monster-skill-level").val("1");
 });
+
+$("#search").on("click", function () {
+    var monster = {"name": currentMonster.text,
+        "level": parseInt($("#monster-level").val()),
+        "awakenings": parseInt($("#monster-awakenings").val()),
+        "plus_eggs": parseInt($("#monster-eggs").val()),
+        "skill_level": parseInt($("#monster-skill-level").val())};
+    var request = {"pad_ID": "000000000",
+        "monster": monster};
+    makeHttpRequest(POST, BASE_URL + FETCH, JSON.stringify(request), null);
+});
+
+function makeHttpRequest(method, url, body, done) {
+    $.ajax({
+      method: method,
+      url: url,
+      data: body
+    })
+    .fail(function(err) {})
+    .done(function(data) {
+        console.log(data);
+    });
+}
